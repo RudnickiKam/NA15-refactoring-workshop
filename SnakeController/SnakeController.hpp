@@ -31,6 +31,9 @@ public:
     Controller& operator=(Controller const& p_rhs) = delete;
 
     void receive(std::unique_ptr<Event> e) override;
+    void foodColidedWithSnake(FoodResp const& requested);
+    void foodColidedWithSnake(FoodInd const& requested);
+    void checkWin();
 
 private:
     struct Segment
